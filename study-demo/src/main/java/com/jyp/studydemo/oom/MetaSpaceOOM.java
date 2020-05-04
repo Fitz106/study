@@ -1,4 +1,4 @@
-package com.jyp.studydemo.main;
+package com.jyp.studydemo.oom;
 
 import java.io.File;
 import java.net.URL;
@@ -22,7 +22,7 @@ public class MetaSpaceOOM {
             while (true){
                 ClassLoader loader = new URLClassLoader(urls);
                 classLoaderList.add(loader);
-                loader.loadClass("com.jyp.studydemo.main.Test");
+                loader.loadClass("com.jyp.studydemo.oom.Test");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,5 +30,5 @@ public class MetaSpaceOOM {
     }
 
 
-//    Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+//    Exception in thread "oom" java.lang.OutOfMemoryError: Java heap space
 }
